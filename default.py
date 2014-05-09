@@ -91,7 +91,7 @@ def listShowsThumb(urlMain):
     entries = []
     for i in range(1, len(spl), 1):
         entry = spl[i]
-        match = re.compile('<h2>(.+?)</h2>', re.DOTALL).findall(entry)
+        match = re.compile('<h.>(.+?)</h.>', re.DOTALL).findall(entry)
         title = cleanTitle(match[0])
         match = re.compile('href="(.+?)"', re.DOTALL).findall(entry)
         url = match[0]
